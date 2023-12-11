@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import ListPeliculas from './components/ListPeliculas';
+import ListUsers from './components/ListUsers';
+import PeliculaDetail from './components/PeliculaDetail';
+import UserDetail from './components/UserDetail';
+
+import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <ListUsers />
+    <ListPeliculas />
+    {/* <Link to="/api/users">Lista de Usuarios</Link>
+    <Link to="/api/products">Lista de Usuarios</Link>
+    <Switch>
+      <Route path="/api/users" component={ListUsers}/>
+      <Route path="/api/users/:id" component={UserDetail}/>
+      <Route path="/api/products" component={ListPeliculas}/>
+      <Route path="/api/products/:id" component={PeliculaDetail}/>
+    </Switch> */}
+    </>
   );
 }
 
