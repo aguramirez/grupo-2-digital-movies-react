@@ -1,23 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react';
+import { useParams } from 'react-router-dom';
 
-function UserDetail() {
-    const [user, setUser] = useState([]);
-
-  useEffect(() => {
-    fetch('http://localhost:3030/api/users/:id')
-    .then( (response) => response.json())
-    .then( (data) => {
-      setUser(data);
-    })
-    .catch((error) => {
-      console.error("Error al obtener los datos:", error);
-    })
-  },[]);
+function UserDetail({users}) {
+  const { id } = useParams();
+  const user = users.find(u => u.id == id)
+  console.log(user)
   return (
     <>
+      <h1>Detalle Usuario</h1>
         <div>
-            <h1>{user.usuario}</h1>
-            <img src="{user.foto}" alt="" />
+            <h1>{user?.usuario}</h1>
+            <img src="{user?.foto}" alt="" />
         </div>
     </>
   )

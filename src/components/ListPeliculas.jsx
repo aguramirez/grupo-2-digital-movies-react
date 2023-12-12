@@ -1,24 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React from "react";
+import { Link } from "react-router-dom"
 
-function ListPeliculas() {
-    const [peliculas, setPeliculas] = useState([]);
 
-  useEffect(() => {
-    fetch('http://localhost:3030/api/products')
-    .then( (response) => response.json())
-    .then( (data) => {
-        setPeliculas(data);
-    })
-    .catch((error) => {
-      console.error("Error al obtener los datos:", error);
-    })
-  },[]);
+function ListPeliculas({peliculas}) {
   return (
     <>
       <h1>Peliculas</h1>
       <ul>
         {peliculas.map((p, index) => (
-          <li key={index}>{p.titulo}</li>
+          <li key={index}>
+            <Link to={"/api/products/" + p.id}>{p.titulo}</Link>
+            </li>
         ))}
       </ul>
     </>

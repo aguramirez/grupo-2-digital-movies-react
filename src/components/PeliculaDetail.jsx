@@ -1,23 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react';
+import { useParams } from 'react-router-dom';
 
-function PeliculaDetail() {
-    const [peli, setPeli] = useState([]);
-
-  useEffect(() => {
-    fetch('http://localhost:3030/api/users/:id')
-    .then( (response) => response.json())
-    .then( (data) => {
-        setPeli(data);
-    })
-    .catch((error) => {
-      console.error("Error al obtener los datos:", error);
-    })
-  },[]);
+function PeliculaDetail({peliculas}) {
+  const { id } = useParams();
+  const peli = peliculas.find(p => p.id == id)
+  console.log(peli);
   return (
     <>
         <div>
-            <h1>{peli.titulo}</h1>
-            <p>{peli.descripcion}</p>
+            <h1>{peli?.titulo}</h1>
+            <p>{peli?.descripcion}</p>
         </div>
     </>
   )
