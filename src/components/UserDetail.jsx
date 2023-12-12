@@ -10,7 +10,8 @@ function UserDetail({users}) {
       <h1>Detalle Usuario</h1>
         <div>
             <h1>{user?.usuario}</h1>
-            <img src="{user?.foto}" alt="" />
+            <img src={"../../" + user?.foto} alt="" />
+            <p>{user.foto}</p>
         </div>
     </>
   )

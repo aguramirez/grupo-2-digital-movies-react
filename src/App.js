@@ -1,7 +1,7 @@
 import './App.css';
 import ListPeliculas from './components/ListPeliculas';
 import ListUsers from './components/ListUsers';
-import UserDetail from './components/ListUsers';
+import UserDetail from './components/UserDetail';
 
 import { Link, Route, Routes } from 'react-router-dom';
 import PeliculaDetail from './components/PeliculaDetail';

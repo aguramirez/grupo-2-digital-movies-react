@@ -10,6 +10,7 @@ function PeliculaDetail({peliculas}) {
         <div>
             <h1>{peli?.titulo}</h1>
             <p>{peli?.descripcion}</p>
+            <img src={"../../" + peli?.imagen} alt="" />
         </div>
     </>
   )
