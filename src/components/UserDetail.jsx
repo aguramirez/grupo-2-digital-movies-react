@@ -8,10 +8,10 @@ function UserDetail({users}) {
   return (
     <>
       <h1>Detalle Usuario</h1>
-        <div>
+        <div style={{ margin: '10px' }}>
             <h1>{user?.usuario}</h1>
             <img src={"../../" + user?.foto} alt="" />
-            <p>{user.foto}</p>
+            <p>{user?.email}</p>
         </div>
     </>
   )

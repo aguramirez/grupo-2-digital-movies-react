@@ -1,0 +1,56 @@
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+.links {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #007bff;
+    /* Color de fondo del botón */
+    color: #ffffff;
+    /* Color del texto del botón */
+    border: 1px solid #007bff;
+    /* Borde del botón */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.links:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al hacer hover */
+    color: #ffffff; /* Cambia el color del texto al hacer hover */
+    border-color: #0056b3; /* Cambia el color del borde al hacer hover */
+  }
+.container {
+    display: flex;
+}
+
+.cantidad-productos,
+.cantidad-usuarios,
+.ultimo-producto,
+.ultimo-usuario {
+    background-color: rgb(167, 181, 194);
+    width: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    margin: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.cantidad-productos:hover,
+.cantidad-usuarios:hover,
+.ultimo-producto:hover,
+.ultimo-usuario:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
